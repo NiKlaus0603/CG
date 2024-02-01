@@ -33,8 +33,8 @@ VertexInfo parseVertexLine(const std::string &line) {
 
 // Additional parsing functions for normals, textures, and faces will go here
 
-std::vector<Triangle> parseOBJ(const std::string &filename) {
-    std::ifstream file(filename);
+std::vector<Triangle> parseOBJ(const std::string &Audi_R8.obj) {
+    std::ifstream file(Audi_R8.obj);
     std::string line;
     std::vector<VertexInfo> vertices, normals, textures;
     std::vector<Triangle> triangles;
@@ -53,11 +53,11 @@ std::vector<Triangle> parseOBJ(const std::string &filename) {
 
 int main(int argc, char **argv) {
     if (argc < 2) {
-        std::cout << "USAGE: homework2_exe [filename]" << std::endl;
+        std::cout << "USAGE: homework2_exe [Audi_R8.obj]" << std::endl;
         return 1;
     }
     std::string filename { argv[1] };
-    auto triangles = parseOBJ(filename);
+    auto triangles = parseOBJ(Audi_R8.obj);
 
     // Print triangles or other processing
 
